@@ -1,0 +1,262 @@
+ *,::after,::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+body{
+    margin:0 100px;
+    height: max-content;
+    width: fit-content;
+    background-color: rgb(1, 12, 8);
+    background-image: url(food/bg.jpg);
+    background-size: cover; /* Adjust as needed */
+    background-position: center; /* Adjust as needed */
+    background-repeat: no-repeat;
+}
+
+/* -------MENU------- */
+.nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+}
+
+.nav .logo h2{
+    font-weight: 900;
+    width: 80%;
+    font-family:Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+.nav .logo b{
+    font: optional;
+    color: rgb(48, 14, 110);
+}
+
+.nav ul{
+    display: flex;
+    list-style: none;
+}
+
+.nav ul li{
+    margin-right: 30px;
+}
+
+.nav ul li a{
+    text-decoration: double;
+    color: black;
+    font-weight: 600;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+/* ------Active------ */
+.nav ul .active::after{
+    content: '';
+    width: 50%;
+    height: 5px;
+    background-color: rgb(49, 0, 139);
+    display: flex;
+    position: relative;
+    margin-left: 10px;
+}
+
+/* ------Input------  */
+
+input{
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.signin{
+    font-size: medium;
+    background: local;
+    border: none;
+}
+
+.signup{
+    background-color: chocolate;
+    color: azure;
+    outline: none;
+    border:none;
+    border-radius: 5px;
+}
+
+
+/* ------Content------ */
+
+.content{
+display: grid;
+grid-template-columns:80%auto ;
+gap: 40px;
+margin: 40px; ;
+align-items: center;
+justify-content: space-between;
+width: 100%;
+}
+
+/* #Content Text */
+/* ======Left-Side====== */
+
+.content .content-left{
+    display: block;
+    width: 100%;
+}
+
+.content .content-left .info{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content .content-left .info h2{
+    font-size: 80px;
+    font-family: sans-serif;
+    margin-bottom:30px ;
+}
+
+.content .content-left .info p{
+    font-size: 35px;
+    line-height: 2pc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom:20px ;
+}
+
+/* #Content */
+/* ======BUTTON======  */
+
+.content .content-left button{
+    padding: 10px 15px;
+    background-color: chocolate;
+    color: azure;
+    outline:none ;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* #Content Image */
+/* ======Right-Side====== */
+
+.content .content-right{
+    display: block;
+    width: 100%;
+}
+
+.content .content-right img{
+    width: 250px;
+    position: relative;
+    animation: rotate 10s linear infinite;
+}
+
+
+/* #Content */
+/* ======ANIMATION======  */
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+ 
+}
+
+/* ====#Cards====  */
+
+.category{
+    width: 100%;
+    display: flex;
+    margin-bottom: 90px;
+    justify-content: center;
+}
+
+.category .list-Item{
+    width: 80%;
+    position: relative;
+    margin-top: 80px;
+}
+
+
+.category .list-Item h1{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: sans-serif;
+   margin-bottom: 60px;
+}
+
+.category .list-Item .card-list{
+    display: grid;
+    grid-template-columns: repeat(4,2fr);
+}
+
+.category .card-list .card{
+    width: 190px;
+    height: auto;
+    display: block;
+    padding: 20px;
+    border-radius:10px ;
+    position: relative;
+    background: #b2a97c;
+    outline: 2px solid #121112;
+    
+}
+
+.category .card-list .card img{
+    width: 100px;
+    height: auto;
+    bottom:320px;
+    left: 50px;
+    object-fit: contain;
+    object-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    box-shadow: 0 10px 20px rgba(0, 6, 15, 0.6);
+    border-radius: 90%;
+
+}
+
+.category .card-list .card .food-title{
+    padding: 20px 0 10px;
+}
+ 
+.category .card-list .card .food-title h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: sans-serif;
+
+}
+
+.category .card .desc-food p{
+    font-size: 14px;
+    text-align: center;
+    font-weight: 50%;
+    margin-bottom: 20px;
+    font-family: sans-serif;
+}
+
+.category .card .price{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.category .card .price .span{
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+/* ========= scroll-bar ========= */
+
+  ::-webkit-scrollbar{
+    width: 10px;
+}
+
+   ::-webkit-scrollbar-thumb{
+    border-radius: 20px;
+    background: rgb(216, 210, 202);
+   }
